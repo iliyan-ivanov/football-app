@@ -1,0 +1,46 @@
+header {
+    width: 70%;
+    background: red;
+    color: white;
+    margin: auto;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header-auth-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-logo {
+    font-size: 40px;
+    margin-left: 80px;
+} 
+
+.header-auth-button {
+    margin-right: 80px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav ul {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(149, 41, 41);
+}
+
+.header-nav li {
+    list-style: none;
+    padding: 5px 0px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white;
+}
