@@ -7,7 +7,7 @@ const Header = () => {
       <section className="header-section">
         <article className="header-logo">Football site</article>
         <article className="header-auth-btns">
-          <Link className="header-auth-button">Login</Link>
+          <Link className="header-auth-button" to="/login">Login</Link>
           <Link className="header-auth-button">Register</Link>
         </article>
       </section>
