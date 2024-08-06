@@ -1,4 +1,4 @@
-.login-form {
+.auth-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,17 +9,21 @@
     margin: auto;
 }
 
-.login-form h2 {
+.auth-form h2 {
     margin-top: 0;
 }
 
-.login-form-inputs {
+.auth-form-inputs {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login-form-inputs label {
+.auth-form-inputs input {
+    text-align: center;
+}
+
+.auth-form-inputs label {
     margin-top: 10px;
 }
 

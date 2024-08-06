@@ -8,7 +8,7 @@ const Header = () => {
         <article className="header-logo">Football site</article>
         <article className="header-auth-btns">
           <Link className="header-auth-button" to="/login">Login</Link>
-          <Link className="header-auth-button">Register</Link>
+          <Link className="header-auth-button" to="/register">Register</Link>
         </article>
       </section>
       <nav className="header-nav">

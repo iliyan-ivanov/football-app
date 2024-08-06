@@ -1,9 +1,9 @@
-import "./Login.css";
+import "./Register.css";
 
-const Login = () => {
+const Register = () => {
   return (
     <form className="auth-form">
-      <h2>Login</h2>
+      <h2>Register</h2>
       <div className="auth-form-inputs">
 
         <label htmlFor="email">Email</label>
@@ -12,10 +12,13 @@ const Login = () => {
         <label htmlFor="password">Password</label>
         <input type="password" id="password" placeholder="Password" name="password" />
 
+        <label htmlFor="repassword">Repeat Password</label>
+        <input type="password" id="repassword" placeholder="Repeat Password" name="repassword" />
+
       </div>
-      <button type="submit" className="auth-btn">Login</button>
+      <button type="submit" className="auth-btn">Register</button>
     </form>
   );
 };
 
-export default Login;
+export default Register;
