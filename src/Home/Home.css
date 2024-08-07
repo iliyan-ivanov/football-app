@@ -1,6 +1,6 @@
 .home-main-news {
     display: flex;
-    width: 70%;
+    width:1000px;
     margin: auto;
     justify-content: space-between;
 }
@@ -8,6 +8,6 @@
 .home-simple-news {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    width: 70%;
+    width:1000px;
     margin: auto;
 }
