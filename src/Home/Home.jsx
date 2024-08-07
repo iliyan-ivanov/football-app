@@ -1,9 +1,33 @@
-import Header from "../Header/Header";
+import { useEffect, useState } from "react";
+import MainNewsCard from "../common/MainNewsCard/MainNewsCard";
+import SimpleNewsCard from "../common/SimpleNewsCard/SimpleNewsCard";
+import { getAllNews } from "../services/newsServices";
 import "./Home.css";
 
 const Home = () => {
+  const [mainNews, setMainNews] = useState([]);
+  const [simpleNews, setSimpleNews] = useState([]);
+
+  useEffect(() => {
+    getAllNews().then((res) => {
+      setMainNews(res.slice(0, 3));
+      setSimpleNews(res.slice(3, 11));
+    });
+  }, []);
+
   return (
-    <Header />
+    <main>
+      <section className="home-main-news">
+        {mainNews.map((x) => (
+          <MainNewsCard key={x.id} title={x.title} image={x.imageURL} />
+        ))}
+      </section>
+      <section className="home-simple-news">
+        {simpleNews.map((x) => (
+          <SimpleNewsCard key={x.id} title={x.title} image={x.imageURL}/>
+        ))}
+      </section>
+    </main>
   );
 };
 

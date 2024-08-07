@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+* {
+    font-family: 'Indie- Flower', cursive;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+*, 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+.simple-card {
+    position: relative;
+    width: 92%;
+    height: 200px;
+    margin: 10px;
+}
+
+.simple-card-img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.simple-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.simple-card-heading {
+    margin: 0;
+    font-size: 14px;
+}
