@@ -1,0 +1,28 @@
+.main-card {
+    position: relative;
+    height: 220px;
+    width: 33%;
+    overflow: hidden;
+}
+
+.main-card-img {
+    width: 430px;
+    height: 100%;
+}
+
+.main-card-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-card-heading {
+    position: absolute;
+    bottom: 0px;
+    color: white;   
+    background: linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0, 0, 0, 0.6) 34%,rgba(0,0,0,.7) 100%);
+    padding: 10px;
+    height: 90px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
