@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     width: 300px;
-    height: 350px;
-    background: red;
     margin: 75px auto;
+    height: 350px;
+    background: #14145b;
+    color: white;
 }
 
 .auth-form h2 {
@@ -21,6 +22,7 @@
 
 .auth-form-inputs input {
     text-align: center;
+    margin-top: 5px;
 }
 
 .auth-form-inputs label {
