@@ -16,7 +16,7 @@ const Register = () => {
         <input type="password" id="repassword" placeholder="Repeat Password" name="repassword" />
 
       </div>
-      <button type="submit" className="auth-btn">Register</button>
+      <button type="submit" className="form-btn">Register</button>
     </form>
   );
 };
