@@ -13,7 +13,7 @@ const Login = () => {
         <input type="password" id="password" placeholder="Password" name="password" />
 
       </div>
-      <button type="submit" className="auth-btn">Login</button>
+      <button type="submit" className="form-btn">Login</button>
     </form>
   );
 };

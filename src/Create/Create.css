@@ -1,0 +1,38 @@
+.create-form {
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-content div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    width: 900px;
+}
+
+.create-content-category {
+    width: 200px;
+}
+
+.create-category,
+.create-title,
+.create-img {
+    text-align: center;
+    height: 50px;
+    box-shadow: black 0px 5px 15px;
+
+}
+
+.create-description {
+    text-align: center;
+    height: 200px;
+    box-shadow: black 0px 5px 15px;
+}

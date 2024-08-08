@@ -1,6 +1,6 @@
 header {
     width:1000px;
-    background: red;
+    background: #14145b;
     color: white;
     margin: auto;
 }
@@ -32,7 +32,7 @@ header {
 .header-nav ul {
     display: flex;
     justify-content: space-around;
-    background: rgb(149, 41, 41);
+    background: #0b0b3b;
 }
 
 .header-nav li {
