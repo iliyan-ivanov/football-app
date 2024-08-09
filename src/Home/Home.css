@@ -1,9 +1,8 @@
 .home-main-news {
     display: flex;
     width:1000px;
-    margin: auto;
+    margin: 10px auto;
     justify-content: space-between;
-    margin-bottom: 10px;
 }
 
 .home-simple-news {

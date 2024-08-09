@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Login from "./Login/Login";
 import Register from "./Register/Register";
 import Create from "./Create/Create";
+import Categories from "./Categories/Categories";
 import Footer from "./Footer/Footer";
 import "./App.css";
 
@@ -16,6 +17,9 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/create" element={<Create />} />
+      <Route path="/europianfootball" element={<Categories category="Europian Football" />} />
+      <Route path="/bulgarianfootball" element={<Categories category="Bulgarian Football" />} />
+      <Route path="/nationalteams" element={<Categories category="National Teams" />} />
     </Routes>
     <Footer />
     </>
