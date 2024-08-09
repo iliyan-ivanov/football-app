@@ -33,6 +33,7 @@ header {
     display: flex;
     justify-content: space-around;
     background: #0b0b3b;
+    margin: 0;
 }
 
 .header-nav li {
