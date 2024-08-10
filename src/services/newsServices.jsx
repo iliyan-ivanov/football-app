@@ -15,6 +15,12 @@ export function getAllNews() {
     .catch((error) => console.log(error));
 }
 
+export function getOneNews(newsId) {
+    return fetch(`https://football-site-13535-default-rtdb.europe-west1.firebasedatabase.app/articles/${newsId}.json`)
+              .then(res => res.json())
+              .catch((error) => console.log(error));
+}
+
 export function createNews(category, title, description, imageURL) {
     let news = {
         category,
@@ -33,4 +39,5 @@ export function createNews(category, title, description, imageURL) {
         },
         body: JSON.stringify(news)
     })
+    .catch((error) => console.log(error));
 }

@@ -7,6 +7,7 @@ import Create from "./Create/Create";
 import Categories from "./Categories/Categories";
 import Footer from "./Footer/Footer";
 import "./App.css";
+import NewsDetails from "./NewsDetails/NewsDetails";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/europianfootball" element={<Categories category="Europian Football" />} />
       <Route path="/bulgarianfootball" element={<Categories category="Bulgarian Football" />} />
       <Route path="/nationalteams" element={<Categories category="National Teams" />} />
+      <Route path="/:newsID" element={<NewsDetails />} />
     </Routes>
     <Footer />
     </>

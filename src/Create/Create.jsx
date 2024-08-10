@@ -73,7 +73,7 @@ const Create = () => {
     ) {
         createNews(category.value, title.value, description.value, imageURL.value)
         .then((res) => {
-          navigate("");
+          navigate("/");
         })
         .catch((err) => {
           console.log("problem with creating");

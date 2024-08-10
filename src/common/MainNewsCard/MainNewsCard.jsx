@@ -3,7 +3,7 @@ import "./MainNewsCard.css";
 
 const MainNewsCard = (props) => {
   return (
-    <Link className="main-card">
+    <Link to={`/${props.id}`} className="main-card">
       <article className="main-card-img">
         <img
           src={props.image}
