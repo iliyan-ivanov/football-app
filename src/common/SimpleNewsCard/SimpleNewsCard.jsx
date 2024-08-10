@@ -3,7 +3,7 @@ import "./SimpleNewsCard.css";
 
 const SimpleNewsCard = (props) => {
   return (
-    <Link className="simple-card">
+    <Link to={`/${props.id}`} className="simple-card">
       <article className="simple-card-img">
         <img
           src={props.image}
