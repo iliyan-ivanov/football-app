@@ -1,21 +1,9 @@
 const url = "https://football-site-13535-default-rtdb.europe-west1.firebasedatabase.app/articles.json";
 
-export function getAllNews(category) {
+export function getAllNews() {
   return fetch(url)
     .then((res) => res.json())
     .then((data) => {
-
-      if (category) {
-        return Object.keys(data)
-          .reverse()
-          .reduce((acc, curr) => {
-            if (data[curr].category == category) {
-              acc.push({ ...data[curr], id: curr });
-            }
-
-            return acc;
-          }, []);
-      }
 
       return Object.keys(data)
         .reverse()
@@ -25,4 +13,24 @@ export function getAllNews(category) {
         }, []);
     })
     .catch((error) => console.log(error));
+}
+
+export function createNews(category, title, description, imageURL) {
+    let news = {
+        category,
+        title,
+        description,
+        imageURL,
+        date: new Date().toJSON().slice(0, 10)
+    }
+
+    console.log(new Date().toJSON().slice(0, 10));
+
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(news)
+    })
 }

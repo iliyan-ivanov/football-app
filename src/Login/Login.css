@@ -8,6 +8,7 @@
     height: 350px;
     background: #14145b;
     color: white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .auth-form h2 {
