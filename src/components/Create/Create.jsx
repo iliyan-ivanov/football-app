@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createNews } from "../services/newsServices";
+import { createNews } from "../../services/newsServices";
 import { useNavigate } from "react-router-dom";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv"
 import "./Create.css";

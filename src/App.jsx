@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home/Home";
-import Header from "./Header/Header";
-import Login from "./Login/Login";
-import Register from "./Register/Register";
-import Create from "./Create/Create";
-import Categories from "./Categories/Categories";
-import Footer from "./Footer/Footer";
+import Home from "./components/Home/Home";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import Create from "./components/Create/Create";
+import Categories from "./components/Categories/Categories";
+import NewsDetails from "./components/NewsDetails/NewsDetails";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
-import NewsDetails from "./NewsDetails/NewsDetails";
 
 function App() {
   return (
