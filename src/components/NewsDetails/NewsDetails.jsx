@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./NewsDetails.css";
-import { getOneNews } from "../services/newsServices";
+import { getOneNews } from "../../services/newsServices";
 
 const NewsDetails = () => {
     const [ news, setNews ] = useState({});
