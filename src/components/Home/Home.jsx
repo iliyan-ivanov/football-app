@@ -18,12 +18,12 @@ const Home = () => {
   return (
     <main>
       <section className="home-main-news">
-        {mainNews.map((x) => (
+        {mainNews?.map((x) => (
           <MainNewsCard key={x.id} title={x.title} image={x.imageURL} id={x.id} />
         ))}
       </section>
       <section className="home-simple-news">
-        {simpleNews.map((x) => (
+        {simpleNews?.map((x) => (
           <SimpleNewsCard key={x.id} title={x.title} image={x.imageURL} id={x.id} />
         ))}
       </section>
