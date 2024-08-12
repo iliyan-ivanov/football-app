@@ -5,14 +5,14 @@
     justify-content: center;
     width: 300px;
     margin: 75px auto;
-    height: 350px;
+    height: 370px;
     background: #14145b;
     color: white;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .auth-form h2 {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .auth-form-inputs {
@@ -23,7 +23,7 @@
 
 .auth-form-inputs input {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .auth-form-inputs label {
