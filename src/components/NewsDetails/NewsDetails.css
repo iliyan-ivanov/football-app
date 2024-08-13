@@ -13,3 +13,25 @@
 .news-details-img img {
     width: 100%;
 }
+
+.news-details-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.details-btn {
+    background: #14145b;
+    color: white;
+    padding: 10px;
+    border-radius: 22px;
+    width: 70px;
+    margin: 20px 10px;
+}
+
+.news-comments-input {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+}
