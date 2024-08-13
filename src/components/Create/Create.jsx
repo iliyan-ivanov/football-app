@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { createNews } from "../../services/newsServices";
 import { useNavigate } from "react-router-dom";
-import ErrorDiv from "../common/ErrorDiv/ErrorDiv"
+import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
+import AuthContext from "../../contexts/AuthContext";
 import "./Create.css";
 
 const Create = () => {
@@ -10,6 +11,7 @@ const Create = () => {
   const [imgErrorMessage, setImgErrorMessage] = useState("");
 
   const navigate = useNavigate();
+  const user = useContext(AuthContext);
 
   const onTitleHandler = (e) => {
     const title = e.target.value;
@@ -71,7 +73,7 @@ const Create = () => {
       imageURL.value != "" &&
       category.value != "Select category"
     ) {
-        createNews(category.value, title.value, description.value, imageURL.value)
+        createNews(category.value, title.value, description.value, imageURL.value, user.uid)
         .then((res) => {
           navigate("/");
         })
