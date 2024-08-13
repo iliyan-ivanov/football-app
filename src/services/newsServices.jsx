@@ -59,3 +59,15 @@ export function addComment(user, comment, newsId) {
     .then(res => res.json())
     .catch((error) => console.log(error));
 }
+
+export function getComments(newsId) {
+  return fetch(`${url}/${newsId}/comments.json`)
+            .then(res => res.json())
+            .then(data => {
+              return Object.keys(data).reverse().reduce((acc, curr) => {
+                acc.push({...data[curr], id: curr})
+                return acc;
+              }, [])
+              
+            })
+}
