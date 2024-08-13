@@ -22,7 +22,8 @@ const NewsDetails = () => {
     getOneNews(newsID)
       .then((data) => setNews(data))
       .catch((err) => console.log(err));
-  }, [comments]);
+      
+  }, []);
 
   const onAddComment = (e) => {
     e.preventDefault();
