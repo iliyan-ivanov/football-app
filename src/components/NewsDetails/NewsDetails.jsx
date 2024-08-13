@@ -1,32 +1,42 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { addComment, getOneNews } from "../../services/newsServices";
+import {
+  addComment,
+  getComments,
+  getOneNews,
+} from "../../services/newsServices";
 import AuthContext from "../../contexts/AuthContext";
 import "./NewsDetails.css";
 
 const NewsDetails = () => {
   const [news, setNews] = useState({});
-  const { newsID } = useParams();
+  const [comments, setComments] = useState([]);
   const user = useContext(AuthContext);
+  const { newsID } = useParams();
 
   useEffect(() => {
+    getComments(newsID)
+      .then((data) => setComments(data))
+      .catch((err) => console.log(err));
+
     getOneNews(newsID)
       .then((data) => setNews(data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [comments]);
 
   const onAddComment = (e) => {
     e.preventDefault();
 
-    const [ person, comment ] = e.target;
+    const [person, comment] = e.target;
 
     if (comment.value == "" || person.value == "") {
       return;
     }
 
     addComment(person.value, comment.value, newsID).then((res) => {
-      console.log(res);
-      console.log("finished");
+      getComments(newsID)
+        .then((data) => setComments(data))
+        .catch((err) => console.log(err));
     });
 
     person.value = "";
@@ -43,6 +53,21 @@ const NewsDetails = () => {
         <p>{news?.description}</p>
       </section>
       <section className="news-details-actions">
+        {!user ? (
+          ""
+        ) : news?.creator == user?.uid ? (
+          <article className="news-details-btns">
+            <button className="details-btn">Edit</button>
+            <button className="details-btn">Delete</button>
+          </article>
+        ) : (
+          <article className="news-details-btns">
+            <button className="details-btn">Like</button>
+            <button className="details-btn">Unlike</button>
+          </article>
+        )}
+      </section>
+      <section className="news-details-comments-section">
         <form onSubmit={onAddComment} className="news-details-form">
           <h4>Write your comment here:</h4>
           <input
@@ -59,19 +84,19 @@ const NewsDetails = () => {
           />
           <button type="submit">Add comment</button>
         </form>
-        {!user ? (
-          ""
-        ) : news?.creator == user?.uid ? (
-          <article className="news-details-btns">
-            <button className="details-btn">Edit</button>
-            <button className="details-btn">Delete</button>
-          </article>
-        ) : (
-          <article className="news-details-btns">
-            <button className="details-btn">Like</button>
-            <button className="details-btn">Unlike</button>
-          </article>
-        )}
+
+        <article className="news-details-comments">
+          <h3>Comments</h3>
+          {comments.map((comment) => (
+            <article
+              className="news-details-comment-container"
+              key={comment.id}
+            >
+              <h4>{comment.user}</h4>
+              <p>{comment.comment}</p>
+            </article>
+          ))}
+        </article>
       </section>
     </main>
   );
