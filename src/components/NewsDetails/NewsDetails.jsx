@@ -22,7 +22,6 @@ const NewsDetails = () => {
     getOneNews(newsID)
       .then((data) => setNews(data))
       .catch((err) => console.log(err));
-      
   }, []);
 
   const onAddComment = (e) => {
@@ -86,18 +85,22 @@ const NewsDetails = () => {
           <button type="submit">Add comment</button>
         </form>
 
-        <article className="news-details-comments">
-          <h3>Comments</h3>
-          {comments.map((comment) => (
-            <article
-              className="news-details-comment-container"
-              key={comment.id}
-            >
-              <h4>{comment.user}</h4>
-              <p>{comment.comment}</p>
-            </article>
-          ))}
-        </article>
+        {comments.length == 0 ? (
+          ""
+        ) : (
+          <article className="news-details-comments">
+            <h3>Comments</h3>
+            {comments.map((comment) => (
+              <article
+                className="news-details-comment-container"
+                key={comment.id}
+              >
+                <h4>{comment.user}</h4>
+                <p>{comment.comment}</p>
+              </article>
+            ))}
+          </article>
+        )}
       </section>
     </main>
   );
