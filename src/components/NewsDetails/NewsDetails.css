@@ -45,6 +45,7 @@
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .news-details-form h4 {
@@ -68,7 +69,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 
 .news-details-comment-container {
