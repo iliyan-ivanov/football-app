@@ -30,10 +30,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/:newsId"
         <Route path="/europianfootball" element={<Categories category="Europian Football" />}/>
         <Route path="/bulgarianfootball" element={<Categories category="Bulgarian Football" />}/>
         <Route path="/nationalteams" element={<Categories category="National Teams" />}/>
-        <Route path="/:newsID" element={<NewsDetails />} />
+        <Route path="/:newsId" element={<NewsDetails />} />
       </Routes>
       <Footer />
     </AuthContext.Provider>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../services/userService";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
-import "./Login.css";
+import "./LoginPage.css";
 
 const Login = () => {
   const [ emailErrorMessage, setEmailErrorMessage ] = useState('');
