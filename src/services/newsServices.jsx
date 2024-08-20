@@ -86,7 +86,6 @@ export function likeNews(newsId, userId, newsLikes) {
   if (newsLikes) {
     newsLikes.push(userId);
     data = { likes: newsLikes };
-    console.log(data);
     
   } else {
     data = { likes: [userId] };
@@ -101,4 +100,19 @@ export function likeNews(newsId, userId, newsLikes) {
   })
     .then((res) => res.json())
     .catch((error) => console.log(error));
+}
+
+export function unlikeNews(newsId, userId, newsLikes) {
+  const index = newsLikes.indexOf(userId);
+  newsLikes.splice(index, 1);
+  
+  return fetch(`${url}/${newsId}.json`, {
+    method: "PATCH",
+    headers: {
+      "Contet-Type": "application/json",
+    },
+    body: JSON.stringify({ likes: newsLikes }),
+  })
+    .then((res) => res.json())
+    .catch((error) => console.log());
 }
