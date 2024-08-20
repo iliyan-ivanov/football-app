@@ -21,6 +21,11 @@
     margin: 30px 0px;
 }
 
+.news-details-btns {
+    display: flex;
+    align-items: center;
+}
+
 .details-btn {
     background: #14145b;
     color: white;
