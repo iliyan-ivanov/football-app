@@ -10,8 +10,8 @@ const Home = () => {
 
   useEffect(() => {
     getAllNews().then((res) => {
-      setMainNews(res.slice(0, 3));
-      setSimpleNews(res.slice(3, 19));
+      setMainNews(res?.slice(0, 3));
+      setSimpleNews(res?.slice(3, 19));
     });
   }, []);
 
