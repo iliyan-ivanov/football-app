@@ -5,6 +5,7 @@ import {
   getComments,
   getOneNews,
   likeNews,
+  unlikeNews,
 } from "../../services/newsServices";
 import AuthContext from "../../contexts/AuthContext";
 import "./NewsDetails.css";
@@ -45,11 +46,21 @@ const NewsDetails = () => {
   }
 
   function onLike() {
-    likeNews(newsID, user.uid, news.likes).then(() => {
-      getOneNews(newsID)
-        .then((data) => setNews(data))
-        .catch((err) => console.log(err));
+    likeNews(newsID, user.uid, news.likes)
+      .then(() => {
+        getOneNews(newsID)
+          .then((data) => setNews(data))
+          .catch((err) => console.log(err));
     });
+  }
+
+  function onUnlike() {
+    unlikeNews(newsID, user.uid, news.likes)
+      .then(() => {
+        getOneNews(newsID)
+          .then((data) => setNews(data))
+          .catch((err) => console.log(err));
+  });
   }
 
   return (
@@ -72,7 +83,9 @@ const NewsDetails = () => {
         ) : (
           <article className="news-details-btns">
             {news.likes?.includes(user.uid) ? (
-              <button className="details-btn">Unlike</button>
+              <button className="details-btn" onClick={onUnlike}>
+                Unlike
+              </button>
             ) : (
               <button className="details-btn" onClick={onLike}>
                 Like
@@ -100,9 +113,9 @@ const NewsDetails = () => {
           <button type="submit">Add comment</button>
         </form>
 
-        {!comments 
-         ? <h3>No comments...</h3>
-         : (
+        {!comments ? (
+          <h3>No comments...</h3>
+        ) : (
           <article className="news-details-comments">
             <h3>Comments</h3>
             {comments?.map((comment) => (
