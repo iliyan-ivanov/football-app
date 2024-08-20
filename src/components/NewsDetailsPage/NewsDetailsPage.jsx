@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import {
   addComment,
@@ -77,8 +77,8 @@ const NewsDetails = () => {
           ""
         ) : news?.creator == user?.uid ? (
           <article className="news-details-btns">
-            <button className="details-btn">Edit</button>
-            <button className="details-btn">Delete</button>
+            <Link to={`/${newsId}/edit`} className="details-btn">Edit</Link>
+            <Link className="details-btn">Delete</Link>
           </article>
         ) : (
           <article className="news-details-btns">

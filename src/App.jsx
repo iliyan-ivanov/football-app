@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { auth } from "./config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
-import Home from "./components/Home/Home";
+import HomePage from "./components/HomePage/HomePage";
 import Header from "./components/Header/Header";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
-import Create from "./components/Create/Create";
+import LoginPage from "./components/LoginPage/LoginPage";
+import RegisterPage from "./components/RegisterPage/RegisterPage";
+import EditPage from "./components/EditPage/EditPage";
+import CreatePage from "./components/CreatePage/CreatePage";
 import Categories from "./components/Categories/Categories";
-import NewsDetails from "./components/NewsDetails/NewsDetails";
+import NewsDetailsPage from "./components/NewsDetailsPage/NewsDetailsPage";
 import Footer from "./components/Footer/Footer";
 import AuthContext from "./contexts/AuthContext";
 import "./App.css";
@@ -26,15 +27,15 @@ function App() {
     <AuthContext.Provider value={user}>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/:newsId"
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/create" element={<CreatePage />} />
+        <Route path="/:newsId/edit" element={<EditPage />} />
         <Route path="/europianfootball" element={<Categories category="Europian Football" />}/>
         <Route path="/bulgarianfootball" element={<Categories category="Bulgarian Football" />}/>
         <Route path="/nationalteams" element={<Categories category="National Teams" />}/>
-        <Route path="/:newsId" element={<NewsDetails />} />
+        <Route path="/:newsId" element={<NewsDetailsPage />} />
       </Routes>
       <Footer />
     </AuthContext.Provider>
