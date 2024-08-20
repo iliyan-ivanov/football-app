@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MainNewsCard from "../common/MainNewsCard/MainNewsCard";
 import SimpleNewsCard from "../common/SimpleNewsCard/SimpleNewsCard";
 import { getAllNews } from "../../services/newsServices";
-import "./Home.css";
+import "./HomePage.css";
 
 const Home = () => {
   const [mainNews, setMainNews] = useState([]);

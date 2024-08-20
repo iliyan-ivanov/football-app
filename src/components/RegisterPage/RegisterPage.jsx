@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../../services/userService";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
-import "./Register.css";
+import "./RegisterPage.css";
 
 const Register = () => {
   const [emailErrorMessage, setEmailErrorMessage] = useState("");

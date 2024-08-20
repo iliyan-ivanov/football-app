@@ -31,8 +31,9 @@
     color: white;
     padding: 10px;
     border-radius: 22px;
-    width: 70px;
+    width: 80px;
     margin: 20px 10px;
+    text-align: center;
 }
 
 .news-details-comments-section {

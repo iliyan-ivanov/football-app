@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import {
   addComment,
@@ -8,20 +8,20 @@ import {
   unlikeNews,
 } from "../../services/newsServices";
 import AuthContext from "../../contexts/AuthContext";
-import "./NewsDetails.css";
+import "./NewsDetailsPage.css";
 
 const NewsDetails = () => {
   const [news, setNews] = useState({});
   const [comments, setComments] = useState([]);
   const user = useContext(AuthContext);
-  const { newsID } = useParams();
+  const { newsId } = useParams();
 
   useEffect(() => {
-    getComments(newsID)
+    getComments(newsId)
       .then((data) => setComments(data))
       .catch((err) => console.log(err));
 
-    getOneNews(newsID)
+    getOneNews(newsId)
       .then((data) => setNews(data))
       .catch((err) => console.log(err));
   }, []);
@@ -35,8 +35,8 @@ const NewsDetails = () => {
       return;
     }
 
-    addComment(person.value, comment.value, newsID).then((res) => {
-      getComments(newsID)
+    addComment(person.value, comment.value, newsId).then((res) => {
+      getComments(newsId)
         .then((data) => setComments(data))
         .catch((err) => console.log(err));
     });
@@ -46,18 +46,18 @@ const NewsDetails = () => {
   }
 
   function onLike() {
-    likeNews(newsID, user.uid, news.likes)
+    likeNews(newsId, user.uid, news.likes)
       .then(() => {
-        getOneNews(newsID)
+        getOneNews(newsId)
           .then((data) => setNews(data))
           .catch((err) => console.log(err));
     });
   }
 
   function onUnlike() {
-    unlikeNews(newsID, user.uid, news.likes)
+    unlikeNews(newsId, user.uid, news.likes)
       .then(() => {
-        getOneNews(newsID)
+        getOneNews(newsId)
           .then((data) => setNews(data))
           .catch((err) => console.log(err));
   });
@@ -77,8 +77,8 @@ const NewsDetails = () => {
           ""
         ) : news?.creator == user?.uid ? (
           <article className="news-details-btns">
-            <button className="details-btn">Edit</button>
-            <button className="details-btn">Delete</button>
+            <Link to={`/${newsId}/edit`} className="details-btn">Edit</Link>
+            <Link className="details-btn">Delete</Link>
           </article>
         ) : (
           <article className="news-details-btns">

@@ -3,7 +3,7 @@ import { createNews } from "../../services/newsServices";
 import { useNavigate } from "react-router-dom";
 import ErrorDiv from "../common/ErrorDiv/ErrorDiv";
 import AuthContext from "../../contexts/AuthContext";
-import "./Create.css";
+import "./CreatePage.css";
 
 const Create = () => {
   const [titleErrorMessage, setTitleErrorMessage] = useState("");
