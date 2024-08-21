@@ -74,10 +74,10 @@ const Create = () => {
       category.value != "Select category"
     ) {
         createNews(category.value, title.value, description.value, imageURL.value, user.uid)
-        .then((res) => {
+        .then(() => {
           navigate("/");
         })
-        .catch((err) => {
+        .catch(() => {
           console.log("problem with creating");
         });
 

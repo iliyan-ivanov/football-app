@@ -33,14 +33,28 @@ export function createNews(category, title, description, imageURL, userId) {
     comments: []
   };
 
-  console.log(new Date().toJSON().slice(0, 10));
-
   return fetch(`${url}.json`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(news),
+  }).catch((error) => console.log(error));
+}
+
+export function editNews(category, title, description, imageURL, newsId) {
+  const newsData = {
+    category,
+    title,
+    description,
+    imageURL
+  }
+  return fetch(`${url}/${newsId}.json`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newsData),
   }).catch((error) => console.log(error));
 }
 
