@@ -46,6 +46,10 @@ const NewsDetails = () => {
   }
 
   function onLike() {
+    if (!user) {
+      return;
+    }
+
     likeNews(newsId, user.uid, news.likes)
       .then(() => {
         getOneNews(newsId)
@@ -55,6 +59,10 @@ const NewsDetails = () => {
   }
 
   function onUnlike() {
+    if (!user) {
+      return;
+    }
+    
     unlikeNews(newsId, user.uid, news.likes)
       .then(() => {
         getOneNews(newsId)
