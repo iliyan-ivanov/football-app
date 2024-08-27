@@ -85,7 +85,7 @@ const Register = () => {
         rePassword.value != ""
       ) {
         register(email.value, password.value)
-          .then((res) => {
+          .then(() => {
             navigate("/");
           })
           .catch((err) => {
