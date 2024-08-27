@@ -128,5 +128,5 @@ export function unlikeNews(newsId, userId, newsLikes) {
     body: JSON.stringify({ likes: newsLikes }),
   })
     .then((res) => res.json())
-    .catch((error) => console.log());
+    .catch((error) => console.log(error));
 }
