@@ -11,7 +11,7 @@
     height: 65%;
 }
 
-.simple-card-img img{
+.simple-card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -23,4 +23,36 @@
     padding: 8px;
     text-align: center;
     color: #14145b;
+}
+
+@media all and (max-width: 800px) {
+    .simple-card {
+        height: 120px;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .simple-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .simple-card-img {
+        width: 40%;
+        height: 100%;
+    }
+
+    .simple-card-heading {
+        width: 60%;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .simple-card-img {
+        width: 50%;
+    }
+
+    .simple-card-heading {
+        width: 50%;
+    }
 }

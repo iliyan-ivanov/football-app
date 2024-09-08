@@ -40,3 +40,53 @@
     box-shadow: 10px 10px grey;
     background: rgb(241, 238, 238);
 }
+
+@media all and (max-width: 1000px)  {
+    .create-form {
+        width: 800px;
+    }
+
+    .create-content div {
+        width: 700px;
+    }
+  }
+  
+  @media all and (max-width: 800px)  {
+    .create-form {
+        width: 650px;
+    }
+
+    .create-content div {
+        width: 600px;
+    }
+  }
+  
+  @media all and (max-width: 650px)  {
+    .create-form {
+        width: 450px;
+    }
+
+    .create-content div {
+        width: 400px;
+    }
+  }
+
+  @media all and (max-width: 450px)  {
+    .create-form {
+        width: 320px;
+    }
+
+    .create-content div {
+        width: 300px;
+    }
+  }
+
+  @media all and (max-width: 320px)  {
+    .create-form {
+        width: auto;
+    }
+
+    .create-content div {
+        width: auto;
+    }
+  }

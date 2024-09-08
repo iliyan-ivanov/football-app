@@ -25,3 +25,52 @@
     text-align: center;
     margin: 0;
 }
+
+
+@media all and (max-width: 1000px)  {
+    .main-card {
+        height: 160px;
+    }
+}
+
+@media all and (max-width: 800px)  {
+    .main-card {
+        height: 130px;
+    }
+
+    .main-card-heading {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 650px)  {
+    .main-card {
+        width: 95%;
+        height: 300px;
+        margin: 10px;
+    }
+
+    .main-card-heading {
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 565px)  {
+    .main-card {
+        height: 250px;
+    }
+
+    .main-card-heading {
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width: 470px)  {
+    .main-card {
+        height: 200px;
+    }
+
+    .main-card-heading {
+        font-size: 20px;
+    }
+}

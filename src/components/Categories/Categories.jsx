@@ -16,7 +16,7 @@ const Categories = (props) => {
   return (
     <main className="categories-main">
       <h1 className="categories-heading">{props.category}</h1>
-      <section className="categoeries-main-news">
+      <section className="categories-main-news">
         {news
           .filter((x) => x.category == props.category)
           .slice(0, 3)
@@ -29,7 +29,7 @@ const Categories = (props) => {
             />
           ))}
       </section>
-      <section className="categoeries-simple-news">
+      <section className="categories-simple-news">
         {news
           .filter((x) => x.category == props.category)
           .slice(3)

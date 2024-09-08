@@ -104,27 +104,27 @@ const Create = () => {
 
         <div>
           <label htmlFor="title">News Title</label>
-          <input
+          <textarea
             type="text"
             className="create-title"
             id="title"
             placeholder="Title"
             name="title"
             onBlur={onTitleHandler}
-          />
+          ></textarea>
           <ErrorDiv>{titleErrorMessage}</ErrorDiv>
         </div>
 
         <div>
           <label htmlFor="imageURL">Image url</label>
-          <input
+          <textarea
             type="text"
             className="create-img"
             id="imageURL"
             placeholder="Image Url"
             name="imageURL"
             onBlur={onImageHandler}
-          />
+          ></textarea>
           <ErrorDiv>{imgErrorMessage}</ErrorDiv>
         </div>
 

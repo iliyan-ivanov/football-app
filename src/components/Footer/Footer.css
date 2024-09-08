@@ -9,3 +9,21 @@ footer {
   background: #14145b;
   color: white;
 }
+
+@media all and (max-width: 1000px)  {
+  footer {
+      width: 800px;
+  }
+}
+
+@media all and (max-width: 800px)  {
+  footer {
+      width: 650px;
+  }
+}
+
+@media all and (max-width: 650px)  {
+  footer {
+      width: auto;
+  }
+}
