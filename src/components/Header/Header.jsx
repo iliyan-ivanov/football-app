@@ -1,20 +1,29 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { logout } from "../../services/userService";
 import AuthContext from "../../contexts/AuthContext";
+import { FaAngleDown } from "react-icons/fa6";
 import "./Header.css";
 
 const Header = () => {
   const user = useContext(AuthContext);
   const navigate = useNavigate();
+  const [showNav, setShowNav ] = useState(true);
 
   const onLogout = (e) => {
     e.preventDefault();
 
     logout()
-      .then(res =>  navigate("/"))
-      .catch(err => "Problem with logging out")
+      .then(() =>  navigate("/"))
+      .catch(() => "Problem with logging out")
    
+  }
+
+  const onShowNavbar = (e) => {
+    e.preventDefault();
+    
+    showNav == true ? setShowNav(false) : setShowNav(true)
+    
   }
 
   return (
@@ -36,7 +45,11 @@ const Header = () => {
             </article>
             )}
       </section>
-      <nav className="header-nav">
+      <section className="header-nav-icon" onClick={onShowNavbar}>
+        <article>Categories</article>
+        <FaAngleDown />
+      </section>
+      <nav className="header-nav" style={{display: showNav ? 'block' : 'none' }}>
         <ul>
           <li>
             <Link to="/">Home</Link>

@@ -11,18 +11,18 @@
     margin: 5px 0px;
 }
 
-.categoeries-main-news {
+.categories-main-news {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
     align-items: center;
 }
 
-.categoeries-simple-news {
+.categories-simple-news {
     width: 900px;
 }
 
-.categoeries-simple-news .simple-card {
+.categories-simple-news .simple-card {
     display: flex;
     width: 900px;
     height: 150px;
@@ -30,7 +30,7 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.categoeries-simple-news .simple-card-img {
+.categories-simple-news .simple-card-img {
     width: 250px;
     height: 150px;
 }
@@ -38,4 +38,81 @@
 .categories-main .simple-card-heading {
     font-size: 17px;
     color: #14145b;
+}
+
+@media all and (max-width: 1000px)  {
+    .categories-main {
+        width: 800px;
+    }
+
+    .categories-simple-news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 700px;
+    }
+
+    .categories-simple-news .simple-card {
+        width: 700px;
+    }
+
+    .categories-main .simple-card-heading {
+        max-width: 65%;
+    }
+}
+
+@media all and (max-width: 800px)  {
+    .categories-main {
+        width: 640px;
+    }
+
+    .categories-simple-news {
+        width: 600px;
+    }
+
+    .categories-simple-news .simple-card {
+        width: 580px;
+    }
+
+    .categories-main .simple-card-heading {
+        max-width: 55%;
+    }
+}
+
+@media all and (max-width: 650px)  {
+    .categories-main {
+        width: auto;
+    }
+
+    .categories-main-news {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .categories-simple-news {
+        width: auto;
+    }
+
+    .categories-simple-news .simple-card {
+        width: 80%;
+    }
+
+    .categories-main .simple-card-heading {
+        max-width: 50%;
+    }
+}
+
+@media all and (max-width: 500px)  {
+    .categories-simple-news .simple-card {
+        width: 90%;
+    }
+
+    .categories-main .simple-card-heading {
+        max-width: 50%;
+    }
+
+    .categories-simple-news .simple-card-img {
+        width: 50%
+    }
 }

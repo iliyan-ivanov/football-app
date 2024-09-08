@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
-* {
-    font-family: 'Indie- Flower', cursive;
-}
-
 html {
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, cursive;
 }
 
 *, 
