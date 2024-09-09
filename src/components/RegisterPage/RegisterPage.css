@@ -1,11 +1,17 @@
 .register-section .auth-form {
     height: 470px;
     width: 350px;
-    margin: 50px auto;
+    margin: 80px auto;
 }
 
 .register-section .error-div,
 .register-section input
  {
     width: 230px;
+}
+
+@media all and (max-width: 1000px)  {
+    .register-section .auth-form {
+        margin-bottom: 150px;
+    }
 }
