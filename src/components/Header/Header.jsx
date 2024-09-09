@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header>
       <section className="header-section">
-        <article className="header-logo">Football site</article>
+        <Link className="header-logo" to="/" >Football site</Link>
 
         {user 
           ? (

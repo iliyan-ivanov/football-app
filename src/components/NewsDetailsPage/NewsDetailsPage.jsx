@@ -38,7 +38,7 @@ const NewsDetails = () => {
     addComment(person.value, comment.value, newsId).then((res) => {
       getComments(newsId)
         .then((data) => setComments(data))
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err));        
     });
 
     person.value = "";
@@ -70,6 +70,9 @@ const NewsDetails = () => {
           .catch((err) => console.log(err));
   });
   }
+
+  console.log(comments);
+
 
   return (
     <main className="news-details-main">

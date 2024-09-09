@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 300px;
-    margin: 75px auto;
+    margin: 100px auto;
     height: 370px;
     background: #14145b;
     color: white;
@@ -33,3 +33,10 @@
 .form-btn {
     margin: 30px auto;
 }
+
+@media all and (max-width: 1000px)  {
+    .auth-form {
+        margin-bottom: 150px;
+    }
+}
+
